@@ -5,14 +5,12 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="logo">
-          <img src="src\assets\gatinhamarie_logo.png" alt="Logo" />
-        </div>
-        <h1>MariePetz</h1>
-        <h2>Cuidando da alimentação do seu pet!</h2>
-      </header>
-
+      <div className="logo">
+        <img src="src/assets/gatinhamarie_logo.png" alt="MariePetz" />
+      </div>
+      <div className="init">
+        <h1>CALCULE</h1>
+      </div>
     </div>
   )
 }
