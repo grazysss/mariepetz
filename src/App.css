@@ -21,6 +21,7 @@
 }
 
 .init {
+  margin: auto;
   width: 420px;
   height: 45px;
   cursor: pointer;
@@ -39,4 +40,48 @@
   color: #FFF4F4;
   background-color: #F9A5B7;
   border-radius: 40px;
+}
+
+/* PÁGINA DE INSERIR DADOS */
+.top img {
+  display: flex;
+  margin: 12px auto 0;
+
+  width: 376px;
+}
+
+.container-forms {
+  display: flex;
+  flex-direction: column;
+  width: 693px;
+  height: 360px;
+
+  border: 1px solid #fb95ab60;
+  border-radius: 40px;
+  background-color: #FFDFE6;
+}
+
+.container-forms input {
+  width: 600px;
+  border: 1px solid black;
+  background-color: #FFF4F4;
+}
+
+.container-forms label {
+  background-color: #FFDFE6;
+}
+
+.nome {
+  background-color: #FFDFE6;
+  margin: 24px 32px 0;
+}
+
+.nome input {
+  margin: 0;
+  height: 20px;
+}
+
+.peso {
+  background-color: #FFDFE6;
+  margin: 24px 32px 0;
 }

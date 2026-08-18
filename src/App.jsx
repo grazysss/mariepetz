@@ -1,16 +1,18 @@
 import { useState } from 'react'
+import PaginaInicial from './components/PaginaInicial'
+import PaginaDados from './components/PaginaDados'
 import './App.css'
 
 function App() {
+  const [tela, setTela] = useState('pagina-inicial')
 
   return (
     <div className="App">
-      <div className="logo">
-        <img src="src/assets/gatinhamarie_logo.png" alt="MariePetz" />
-      </div>
-      <div className="init">
-        <h1>CALCULE</h1>
-      </div>
+      {tela === 'pagina-inicial' && (
+        <PaginaInicial setTela={setTela} />
+      )}
+      {tela === 'dados' && <PaginaDados />}
+
     </div>
   )
 }
