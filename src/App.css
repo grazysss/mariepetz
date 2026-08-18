@@ -11,6 +11,7 @@
   justify-content: center;
 
   margin-top: 72px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .logo img {
@@ -32,7 +33,6 @@
 }
 
 .init h1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 20px;
   text-align: center;
   margin-top: 9px;
@@ -54,16 +54,16 @@
   display: flex;
   flex-direction: column;
   width: 693px;
-  height: 360px;
+  height: 400px;
 
   border: 1px solid #fb95ab60;
   border-radius: 40px;
   background-color: #FFDFE6;
 }
 
-.container-forms input {
+.container-forms input, select {
   width: 600px;
-  border: 1px solid black;
+  border: 1px solid #F9A5B7;
   background-color: #FFF4F4;
 }
 
@@ -78,10 +78,48 @@
 
 .nome input {
   margin: 0;
-  height: 20px;
+  height: 24px;
 }
 
 .peso {
   background-color: #FFDFE6;
   margin: 24px 32px 0;
+}
+
+.fasevida {
+  background-color: #FFDFE6;
+  margin: 24px 32px 0;
+}
+
+.fasevida select {
+  color: #190005;
+  width: 606px;
+  height: 32px;
+}
+
+.nivelatv {
+  background-color: #FFDFE6;
+  margin: 24px 32px 0;
+}
+
+.options {
+  display: flex;
+  background-color: #FFDFE6;
+
+  gap: 72px;
+}
+
+.options input {
+  width: 18px;
+  margin-left: 12px;
+}
+
+.preco {
+  background-color: #FFDFE6;
+  margin: 24px 32px 0;
+}
+
+.preco input {
+  height: 24px;
+  text-align: end;
 }
