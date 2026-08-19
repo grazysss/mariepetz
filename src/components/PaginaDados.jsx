@@ -48,16 +48,16 @@ function PaginaDados() {
                     <label htmlFor="">Nível de atividade</label>
                     <div className="options">
                         <div className="baixo">
-                            <input type="radio" name="Baixo" id="" />
+                            <input type="radio" name="atv" value="V" />
                             <label htmlFor="">Baixo</label>
                         </div>
                         
                         <div className="moderado">
-                            <input type="radio" name="Moderado" id="" />
+                            <input type="radio" name="atv" value="V" />
                             <label htmlFor="">Moderado</label>
                         </div>
                         <div className="alto">
-                            <input type="radio" name="Alto" id="" />
+                            <input type="radio" name="atv" value="V" />
                             <label htmlFor="">Alto</label>
                         </div>
                     </div>

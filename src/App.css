@@ -158,6 +158,10 @@
   margin-left: 12px;
 }
 
+.options label {
+  background-color: #FFF4F4;
+}
+
 .baixo {
   width: 180px;
   height: 40px;
