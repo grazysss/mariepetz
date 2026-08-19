@@ -22,6 +22,7 @@
     In = atividade | Out = fator da atividade
 
 4. Calcular MER
+    MER = RER * fator
     In = RER, fator da fase, fator da atividade | Out = kcal/dia
 
 5. Ração Diária

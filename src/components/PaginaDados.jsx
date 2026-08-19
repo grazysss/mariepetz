@@ -67,6 +67,11 @@ function PaginaDados() {
                     <label htmlFor="">Preço da ração por kg</label>
                     <input type="text" placeholder="R$/kg"/>
                 </div>
+
+                <div className="energia">
+                    <label htmlFor="">Energia da ração</label>
+                    <input type="text" placeholder="kcal/kg" />
+                </div>
             </div>
             <br />
             <div className="init">
