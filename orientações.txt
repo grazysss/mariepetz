@@ -58,15 +58,15 @@ GRAZY:
 9. Testes dos primeiros cálculos
 
 YONARA:
-1. calcularMER()
-2. calcularRacaoDiaria()
-3. calcularConsumoMensal()
-4. calcularCustoMensal()
-5. calcularCustoAnual()
-6. calcularSacosAno()
-7. Tela de resultados
-8. Cards de resultado
-9. Formatação dos resultados
+1. calcularMER() OK
+2. calcularRacaoDiaria() OK
+3. calcularConsumoMensal() OK
+4. calcularCustoMensal() OK
+5. calcularCustoAnual() OK
+6. calcularSacosAno() OK
+7. Tela de resultados OK
+8. Cards de resultado OK
+9. Formatação dos resultados OK
 
 ======================================================================
 

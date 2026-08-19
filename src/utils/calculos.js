@@ -1,4 +1,4 @@
-// calculos.js
+
 // Funções puras de cálculo nutricional/financeiro da ração.
 // Cada função recebe um valor e devolve outro — sem mexer em tela ou estado.
 
@@ -58,3 +58,4 @@ export function calcularCustoAnual(custoMensal) {
 export function calcularSacosAno(consumoAnualKg, tamanhoSacoKg) {
   return consumoAnualKg / tamanhoSacoKg
 }
+
