@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   width: 693px;
-  height: 440px;
+  height: 500px;
 
   border: 1px solid #fb95ab60;
   border-radius: 40px;
@@ -212,6 +212,21 @@
   margin-right: 4px;
 }
 
+.energia {
+  background-color: #FFDFE6;
+  margin: 24px 32px 0;
+
+  width: 606px;
+}
+
+.energia input {
+  height: 24px;
+}
+
+.energia input::placeholder {
+  text-align: end;
+  margin-right: 4px;
+}
 
 /* PÁGINA DE RESULTADOS */
 
