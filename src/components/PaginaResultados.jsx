@@ -1,9 +1,10 @@
 function PaginaResultados({ dadosPet }) {
+
     const {
-        nomePet = 'Nome do pet',
+        nome = 'Nome do pet',
         consumoMensal = '0',
-        custoMensal = '0,00',
-        custoAnual = '0,00',
+        custoMensal = '0',
+        custoAnual = '0',
         sacosPorAno = '0',
     } = dadosPet || {}
 
@@ -14,7 +15,7 @@ function PaginaResultados({ dadosPet }) {
             </div>
 
             <div className="container-resultados">
-                <h2 className="titulo-pet">{dados.nome}</h2>
+                <h2 className="titulo-pet">{nome}</h2>
 
                 <div className="grid-resultados">
                     <div className="card-resultado">
