@@ -54,6 +54,10 @@ function PaginaDados() {
                     <input type="text" placeholder="R$/kg"/>
                 </div>
             </div>
+            <br />
+            <div className="init">
+                <h1>CALCULE</h1>
+            </div>
         </div>
 
     )
