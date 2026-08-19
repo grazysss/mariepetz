@@ -1,4 +1,4 @@
-function PaginaResultados({ dadosPet }) {
+function PaginaResultados({ dadosPet, setTela}) {
 
     const {
         nome = 'Nome do pet',
@@ -20,24 +20,25 @@ function PaginaResultados({ dadosPet }) {
                 <div className="grid-resultados">
                     <div className="card-resultado">
                         <span className="label-resultado">Consumo mensal</span>
-                        <span className="valor-resultado">{consumoMensal} Kg</span>
+                        <span className="valor-resultado">{consumoMensal.toFixed(2)}kg</span>
                     </div>
 
                     <div className="card-resultado">
                         <span className="label-resultado">Custo mensal</span>
-                        <span className="valor-resultado">R$ {custoMensal}</span>
+                        <span className="valor-resultado">R$ {custoMensal.toFixed(2)}</span>
                     </div>
 
                     <div className="card-resultado">
                         <span className="label-resultado">Custo anual</span>
-                        <span className="valor-resultado">R$ {custoAnual}</span>
+                        <span className="valor-resultado">R$ {custoAnual.toFixed(2)}</span>
                     </div>
 
                     <div className="card-resultado">
                         <span className="label-resultado">Sacos por ano</span>
-                        <span className="valor-resultado">{sacosPorAno} sacos</span>
+                        <span className="valor-resultado">{sacosPorAno.toFixed(0)} sacos</span>
                     </div>
                 </div>
+                <button className="botao-recalcular" onClick={() => setTela('dados')}>Recalcular</button>
             </div>
         </div>
     )

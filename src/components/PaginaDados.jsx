@@ -5,6 +5,7 @@ import {
     calcularFatorAtividade,
     calcularMER,
     calcularRacaoDiaria,
+    calcularCustoMensal,
     calcularConsumoMensal,
     calcularCustoAnual,
     calcularSacosAno
@@ -50,6 +51,8 @@ function PaginaDados({ setTela, setDadosPet }) {
         if (!dadosValidos) {
             return;
         }
+
+        const tamanhoSaco = 1
 
         const rer = calcularRER(peso)
         const fatorFase = calcularFatorFase(fase)

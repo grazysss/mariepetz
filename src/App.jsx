@@ -21,6 +21,7 @@ function App() {
         />}
       {tela === 'resultados' && (<PaginaResultados 
         dadosPet={dadosPet} 
+        setTela={setTela}
         />)}
     </div>
   )
