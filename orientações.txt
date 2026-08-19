@@ -1,0 +1,101 @@
+## useStates
+1. nome (str)
+2. peso (int)
+3. faseVida (str)
+4. atividade (str) 
+5. precoRacao (int/float)
+6. energiaRacao (int) - kcal/kg
+
+## FUNÇÕES
+1. Calcular RER (Resting Energy Requirement)
+    RER = 70 * peso^0,75
+    In = peso | Out = RER em kcal/dia
+
+2. Fator da faseVida
+    In = faseVida | Out = fator energético
+    Ex:
+    filhote → fator maior
+    adulto → fator de manutenção
+    idoso → fator específico definido pelo projeto
+
+3. Fator de atividade
+    In = atividade | Out = fator da atividade
+
+4. Calcular MER
+    In = RER, fator da fase, fator da atividade | Out = kcal/dia
+
+5. Ração Diária
+    In = kcal/kg da ração | Out = g/dia
+
+6. Consumo Mensal 
+    In = g/dia | Out = kg/mês
+
+7. Custo Mensal
+    In = kg/mês, preço/kg | Out = R$/mês
+
+8. Custo Anual
+    In = R$/mês | Out = R$/ano
+
+9. Sacos por ano
+    In = kg consumidos por ano, tamanho do saco | Out = qtd de sacos
+
+
+
+=====================================================================
+DIVISÃO DE TAREFAS
+=====================================================================
+
+GRAZY: 
+1. Eneegia da ração (adicionar campo)
+2. useState da energia
+3. Validação dos campos
+4. Validação numérica
+5. calcularRER()
+6. calcularFatorFase()
+7. calcularFatorAtividade()
+8. Denifição dos fatores
+9. Testes dos primeiros cálculos
+
+YONARA:
+1. calcularMER()
+2. calcularRacaoDiaria()
+3. calcularConsumoMensal()
+4. calcularCustoMensal()
+5. calcularCustoAnual()
+6. calcularSacosAno()
+7. Tela de resultados
+8. Cards de resultado
+9. Formatação dos resultados
+
+======================================================================
+
+Pessoa 1
+"Entrada + início da matemática"
+ Adicionar energiaRacao
+ Criar estado da energia
+ Validar formulário
+ calcularRER()
+ calcularFatorFase()
+ calcularFatorAtividade()
+ Testar essas funções
+
+Pessoa 2
+"Final da matemática + saída"
+ calcularMER()
+ calcularRacaoDiaria()
+ calcularConsumoMensal()
+ calcularCustoMensal()
+ calcularCustoAnual()
+ calcularSacosAno()
+ Montar PaginaResultado
+ Formatar kg, R$ e sacos
+ Testar os resultados
+
+Juntas
+ Definir os fatores nutricionais
+ Definir tamanho do saco
+ Definir valores de teste
+ Fazer o botão CALCULE
+ Passar os dados entre as telas
+ Integrar as branches
+ Testar o fluxo completo
