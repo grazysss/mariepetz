@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 function PaginaDados() {
+    const [peso, setPeso] = useState(0)
+
+    const pesos = [0, 5, 10, 15, 20];
+
     return (
         <div className="pagdados">
             <div className="top">
@@ -17,15 +23,16 @@ function PaginaDados() {
                         type="range" name="Peso" id="pesoanimal" 
                         min="0" max="20"
                         step="1"
-                        list="tickmarks"/>
+                        value={peso}
+                        onChange={(e) => setPeso(Number(e.target.value))}/>
 
-                    <datalist id="tickmarks">
-                        <option value="0" label="0 kg" />
-                        <option value="5" label="5 kg" />
-                        <option value="10" label="10 kg" />
-                        <option value="15" label="15 kg" />
-                        <option value="20" label="20 kg" />
-                    </datalist>
+                    <div className="range-labels">
+                        {pesos.map((valor) => (
+                            <span className={peso === valor ? "selecionado" : ""}>
+                                {valor} kg
+                            </span>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="fasevida">
@@ -40,12 +47,19 @@ function PaginaDados() {
                 <div className="nivelatv">
                     <label htmlFor="">Nível de atividade</label>
                     <div className="options">
-                        <input type="radio" name="Baixo" id="" />
-                        <label htmlFor="">Baixo</label>
-                        <input type="radio" name="Moderado" id="" />
-                        <label htmlFor="">Moderado</label>
-                        <input type="radio" name="Alto" id="" />
-                        <label htmlFor="">Alto</label>
+                        <div className="baixo">
+                            <input type="radio" name="Baixo" id="" />
+                            <label htmlFor="">Baixo</label>
+                        </div>
+                        
+                        <div className="moderado">
+                            <input type="radio" name="Moderado" id="" />
+                            <label htmlFor="">Moderado</label>
+                        </div>
+                        <div className="alto">
+                            <input type="radio" name="Alto" id="" />
+                            <label htmlFor="">Alto</label>
+                        </div>
                     </div>
                 </div>
 
