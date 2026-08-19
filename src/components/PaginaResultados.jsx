@@ -1,7 +1,7 @@
 function PaginaResultados({ dados }) {
     // valores de segurança, caso a página seja aberta antes do cálculo terminar
     const {
-        nomePet = 'Seu pet',
+        nomePet = 'Nome do pet',
         consumoMensal = '0',
         custoMensal = '0,00',
         custoAnual = '0,00',
