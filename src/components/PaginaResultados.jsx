@@ -1,12 +1,11 @@
-function PaginaResultados({ dados }) {
-    // valores de segurança, caso a página seja aberta antes do cálculo terminar
+function PaginaResultados({ dadosPet }) {
     const {
         nomePet = 'Nome do pet',
         consumoMensal = '0',
         custoMensal = '0,00',
         custoAnual = '0,00',
         sacosPorAno = '0',
-    } = dados || {}
+    } = dadosPet || {}
 
     return (
         <div className="resultados">
@@ -15,7 +14,7 @@ function PaginaResultados({ dados }) {
             </div>
 
             <div className="container-resultados">
-                <h2 className="titulo-pet">{nomePet}</h2>
+                <h2 className="titulo-pet">{dados.nome}</h2>
 
                 <div className="grid-resultados">
                     <div className="card-resultado">

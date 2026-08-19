@@ -1,6 +1,16 @@
 import { useState } from "react";
+import {
+    calcularRER,
+    calcularFatorFase,
+    calcularFatorAtividade,
+    calcularMER,
+    calcularRacaoDiaria,
+    calcularConsumoMensal,
+    calcularCustoAnual,
+    calcularSacosAno
+} from '../utils/calculos'
 
-function PaginaDados({ setTela }) {
+function PaginaDados({ setTela, setDadosPet }) {
     const [nome, setNome] = useState('')
     const [peso, setPeso] = useState(0)
     const [fase, setFase] = useState('')
@@ -26,7 +36,7 @@ function PaginaDados({ setTela }) {
         } else if (preco === '' || isNaN(preco) || preco <= 0) {
             alert('Insira o preço da ração por KG')
             return false
-        } else if (energia === '' || isNaN(energiaNumero) || energiaNumero <= 0) {
+        } else if (energia === '' || isNaN(energia) || energia <= 0) {
             alert('Insira as kcal/kg da ração')
             return false
         }
@@ -36,9 +46,67 @@ function PaginaDados({ setTela }) {
 
     function calcular() {
         const dadosValidos = validarDados();
+
         if (!dadosValidos) {
             return;
         }
+
+        const rer = calcularRER(peso)
+        const fatorFase = calcularFatorFase(fase)
+        const fatorAtividade = calcularFatorAtividade(atividade)
+
+        const mer = calcularMER(
+            rer,
+            fatorFase,
+            fatorAtividade
+        )
+
+        const racaoDiaria = calcularRacaoDiaria(
+            mer,
+            Number(energia)
+        )
+
+        const consumoMensal = calcularConsumoMensal(
+            racaoDiaria
+        )
+
+        const custoMensal = calcularCustoMensal(
+            consumoMensal,
+            Number(preco)
+        )
+        
+        const custoAnual = calcularCustoAnual(
+            custoMensal
+        )
+
+        const consumoAnual = consumoMensal * 12
+
+        const sacosPorAno = calcularSacosAno(
+            consumoAnual,
+            tamanhoSaco
+        )
+
+        const dados = {
+            nome, 
+            peso,
+            fase,
+            atividade,
+            preco: Number(preco),
+            energia: Number(energia),
+
+            rer,
+            fatorFase,
+            fatorAtividade,
+            mer,
+
+            racaoDiaria,
+            consumoMensal,
+            custoMensal,
+            custoAnual,
+            sacosPorAno
+        }
+
+        setDadosPet(dados)
 
         setTela('resultados');
         }
