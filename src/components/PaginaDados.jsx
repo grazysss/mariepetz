@@ -40,7 +40,6 @@ function PaginaDados({ setTela }) {
             return;
         }
 
-        // Altera a tela no componente pai
         setTela('resultados');
         }
 

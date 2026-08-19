@@ -2,6 +2,32 @@
 // Funções puras de cálculo nutricional/financeiro da ração.
 // Cada função recebe um valor e devolve outro — sem mexer em tela ou estado.
 
+const fatoresFase = {
+  filhote: 2.5,
+  adulto: 1.6,
+  idoso: 1.4
+}
+
+const fatoresAtividade = {
+  baixo: 0.9,
+  moderado: 1.0,
+  alto: 1.2
+}
+
+// 1. RER (Resting Energy Requirement) = 70 * peso^0,75
+export function calcularRER(peso) {
+  return 70 * (peso ** 0.75)
+}
+
+export function calcularFatorFase(fase) {
+  return fatoresFase[fase]
+}
+
+// 3. Fator Atividade
+export function calcularFatorAtividade(atividade) {
+  return fatoresAtividade[atividade]
+}
+
 // 4. MER = RER * fator da fase * fator da atividade
 export function calcularMER(rer, fatorFase, fatorAtividade) {
   return rer * fatorFase * fatorAtividade
@@ -32,4 +58,3 @@ export function calcularCustoAnual(custoMensal) {
 export function calcularSacosAno(consumoAnualKg, tamanhoSacoKg) {
   return consumoAnualKg / tamanhoSacoKg
 }
-
