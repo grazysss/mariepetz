@@ -5,6 +5,8 @@ function PaginaDados() {
 
     const pesos = [0, 5, 10, 15, 20];
 
+    const [energia, setEnergia] = useState('')
+
     return (
         <div className="pagdados">
             <div className="top">
@@ -70,7 +72,9 @@ function PaginaDados() {
 
                 <div className="energia">
                     <label htmlFor="">Energia da ração</label>
-                    <input type="text" placeholder="kcal/kg" />
+                    <input type="text" placeholder="kcal/kg" 
+                    value={energia}
+                    onChange={(e) => setEnergia(e.target.value)}/>
                 </div>
             </div>
             <br />
