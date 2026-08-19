@@ -47,10 +47,10 @@ DIVISÃO DE TAREFAS
 =====================================================================
 
 GRAZY: 
-1. Eneegia da ração (adicionar campo)
-2. useState da energia
-3. Validação dos campos
-4. Validação numérica
+1. Energia da ração (adicionar campo) OK
+2. useState da energia OK
+3. Validação dos campos OK
+4. Validação numérica 
 5. calcularRER()
 6. calcularFatorFase()
 7. calcularFatorAtividade()

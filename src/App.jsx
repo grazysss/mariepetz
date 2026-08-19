@@ -12,9 +12,8 @@ function App() {
       {tela === 'pagina-inicial' && (
         <PaginaInicial setTela={setTela} />
       )}
-      {tela === 'dados' && <PaginaDados />}
-      {tela === 'resultados' && <PaginaResultados />}
-
+      {tela === 'dados' && <PaginaDados setTela={setTela} />}
+      {tela === 'resultados' && (<PaginaResultados />)}
     </div>
   )
 }
