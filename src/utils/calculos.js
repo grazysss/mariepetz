@@ -1,4 +1,4 @@
-// calculos.js
+
 // Funções puras de cálculo nutricional/financeiro da ração.
 // Cada função recebe um valor e devolve outro — sem mexer em tela ou estado.
 
@@ -32,4 +32,23 @@ export function calcularCustoAnual(custoMensal) {
 export function calcularSacosAno(consumoAnualKg, tamanhoSacoKg) {
   return consumoAnualKg / tamanhoSacoKg
 }
+
+// Formata um número de kg com 2 casas decimais, ex: 4.32
+export function formatarKg(valor) {
+  return valor.toFixed(2)
+}
+
+// Formata um número como reais, ex: 108 -> "108,00"
+// toFixed(2) já arredonda pra 2 casas; troca o ponto por vírgula
+// porque no Brasil usamos vírgula como separador decimal.
+export function formatarReal(valor) {
+  return valor.toFixed(2).replace('.', ',')
+}
+
+// Sacos: arredonda pra cima, porque não dá pra comprar "3,46 sacos"
+// na prática — ou você compra 4 pra ter o suficiente pro ano todo.
+export function formatarSacos(valor) {
+  return Math.ceil(valor)
+}
+
 

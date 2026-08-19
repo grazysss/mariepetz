@@ -5,7 +5,7 @@ import PaginaResultados from './components/PaginaResultados'
 import './App.css'
 
 function App() {
-  const [tela, setTela] = useState('pagina-inicial')
+  const [tela, setTela] = useState('resultados')
 
   return (
     <div className="App">
